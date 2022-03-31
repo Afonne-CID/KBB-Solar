@@ -127,7 +127,99 @@
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-  <section class="about-us" id="about">
+  <section class="calculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="left-image">
+            <img src="assets/images/calculator-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="section-heading">
+            <h6>What Do I Need</h6>
+            <h4>Calculate Your Power Need Requirement</h4>
+          </div>
+          <form id="calculate">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="name">Your Name</label>
+                  <input type="name" name="name" id="name" placeholder="" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="email">Your Email</label>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="chooseOption" class="form-label">Appliance</label>
+                  <select name="Appliance" class="form-select" aria-label="Default select example" id="appliance1">
+                      <option selected>Choose an Option</option>
+                      <option value="Fridge">Fridge</option>
+                      <option value="TV">TV</option>
+                      <option value="AC">AC</option>
+                      <option value="Freezer">Freezer</option>
+                      <option value="Fans">Fans</option>
+                      <option value="Printer">Printer</option>
+                      <option value="Lights">Lights</option>
+                      <option value="Laptop">Laptop</option>
+                      <option value="Microwave">Microwave</option>
+                  </select>
+              </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <label for="chooseOption" class="form-label">Number I Have</label>
+                  <select name="Count" class="form-select" aria-label="Default select example" id="appliance1Count">
+                      <option selected>Choose an Option</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                      <option>16</option>
+                      <option>17</option>
+                      <option>18</option>
+                      <option>19</option>
+                      <option>20</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="row" id="addHere"></div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <button type="button" class="btn btn-purple" id="addNew">Add Appliance</button>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <button type="button" id="form-submit" class="orange-button">Calculate Now</button>
+                </fieldset>
+              </div>
+            </div>
+            <br />
+            <div class="card" id="res" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us" id="setup-guide">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -194,95 +286,6 @@
     </div>
   </section>
 
-  <section class="calculator">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="left-image">
-            <img src="assets/images/calculator-image.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="section-heading">
-            <h6>What Do I Need</h6>
-            <h4>Calculate Your Power Need Requirement</h4>
-          </div>
-          <form id="calculate" action="" method="get">
-            <div class="row">
-              <div class="col-lg-6">
-                <fieldset>
-                  <label for="name">Your Name</label>
-                  <input type="name" name="name" id="name" placeholder="" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <label for="email">Your Email</label>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <label for="chooseOption" class="form-label">Appliance</label>
-                  <select name="Appliance" class="form-select" aria-label="Default select example" id="chooseAppliance">
-                      <option selected>Choose an Option</option>
-                      <option value="Fridge">Fridge</option>
-                      <option value="TV">TV</option>
-                      <option value="AC">AC</option>
-                      <option value="Freezer">Freezer</option>
-                      <option value="Fans">Fans</option>
-                      <option value="Printer">Printer</option>
-                      <option value="Lights">Lights</option>
-                      <option value="Laptop">Laptop</option>
-                      <option value="Microwave">Microwave</option>
-                  </select>
-              </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <label for="chooseOption" class="form-label">Number I Have</label>
-                  <select name="Count" class="form-select" aria-label="Default select example" id="chooseCount">
-                      <option selected>Choose an Option</option>
-                      <option onselect="addInput;">1</option>
-                      <option onselect="addInput;">2</option>
-                      <option onselect="addInput;">3</option>
-                      <option onselect="addInput;">4</option>
-                      <option onselect="addInput;">5</option>
-                      <option onselect="addInput;">6</option>
-                      <option onselect="addInput;">7</option>
-                      <option onselect="addInput;">8</option>
-                      <option onselect="addInput;">9</option>
-                      <option onselect="addInput;">10</option>
-                      <option onselect="addInput;">11</option>
-                      <option onselect="addInput;">12</option>
-                      <option onselect="addInput;">13</option>
-                      <option onselect="addInput;">14</option>
-                      <option onselect="addInput;">15</option>
-                      <option onselect="addInput;">16</option>
-                      <option onselect="addInput;">17</option>
-                      <option onselect="addInput;">18</option>
-                      <option onselect="addInput;">19</option>
-                      <option onselect="addInput;">20</option>
-                  </select>
-              </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <button type="button" class="btn btn-purple">Add Appliance</button>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Calculate Now</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="row">
@@ -296,34 +299,16 @@
           <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
             <div class="item">
               <i class="fa fa-quote-left kbb-quote"></i>
-              <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
-              <h4>David Eigenberg</h4>
-              <span>CEO of Mexant</span>
+              <p>“As the Chief Medical Director, of a Federal Government Hospital our operational cost on diesel was weighing us down. When the idea of solar panels was introduced to me, I had the impression that they don’t work well but with the way KBB convinced me, I decided to risk the installation of a 10 KVA to power the wards. This was the best decision I ever made, and this made us install an additional 30 KVA because we saw the benefit. The most interesting aspect of their installation was how the synchronized inverters to give a single power output, and this helped us with the ease of modular installation because these funds did not come at once.”</p>
+              <h4>Dr. Bassey Edet</h4>
+              <span>Chief Medical Director, Federal Psychiatric Hospital, Calabar.</span>
               <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
+                <img src="assets/images/no-image.png" alt="">
               </div>
             </div>
-            <div class="item">
-              <i class="fa fa-quote-left kbb-quote"></i>
-              <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
-              <h4>Andrew Garfield</h4>
-              <span>CTO of Mexant</span>
-              <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left kbb-quote"></i>
-              <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
-              <h4>George Lopez</h4>
-              <span>Crypto Manager</span>
-              <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
-              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -352,7 +337,7 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-        var interleaveOffset = 0.5;
+      var interleaveOffset = 0.5;
 
       var swiperOptions = {
         loop: true,
@@ -394,6 +379,10 @@
       };
 
       var swiper = new Swiper(".swiper-container", swiperOptions);
+
+      $('.swiper-container').swiper-container({
+          interval: 5000 //changes the speed
+      })
     </script>
   </body>
 </html>
