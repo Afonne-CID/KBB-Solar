@@ -1,3 +1,4 @@
+/*
 ---------------------------------------------
 font & reset css
 --------------------------------------------- 
@@ -16,6 +17,10 @@ figure, header, nav, section, article, aside, footer, figcaption {
   padding: 0;
   border: 0;
   outline: 0;
+}
+
+body a {
+  text-decoration: none !important;
 }
 
 .clearfix:after {
@@ -1766,4 +1771,133 @@ tr:nth-child(1) {
   background-color: #5a02ac;
   color: #fff;
   height: 40px;
+}
+
+.founder-msg {
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.faq-section {
+  margin-left: 100px;
+}
+
+.card-header {
+  border-color: #5a02ac !important;
+  border-radius: 25px !important;
+}
+
+.btn-link {
+  color: #5a02ac !important;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.who-header {
+  border: 2px solid #fd7e14;
+  border-radius: 25px;
+}
+
+/* Facilitator Call To Action */
+.facilitator-call-to-action {
+  background: url(../images/hire_bg.jpg) no-repeat scroll 0 0/cover;
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+  margin-bottom: -130px;
+}
+
+.facilitator-call-to-action::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 39%;
+  height: 100%;
+  background: #4c078c none repeat scroll 0 0;
+  z-index: -1;
+}
+
+.facilitator-call-to-action::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 61%;
+  height: 100%;
+  background: rgba(115, 66, 199, 0.61) none repeat scroll 0 0;
+  z-index: -1;
+}
+
+.call-to-circle {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 100%;
+  background: #4c078c  none repeat scroll 0 0;
+  width: 30%;
+  border-radius: 50%;
+  left: 23%;
+}
+
+.inner-call-to-left {
+  width: 48%;
+}
+
+.inner-call-to-left h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 22px;
+}
+
+.inner-call-to-left p {
+  color: #f2f2f2;
+}
+/* Ends here */
+
+.kbb-about {
+  padding: 15px;
+}
+
+#who-we-are {
+  padding-left: 5px;
+}
+
+.kbb-about, .kbb-about p {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .facilitator-call-to-action::after, .call-to-circle {
+      display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .facilitator-call-to-action::before, .inner-call-to-left {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+}
+
+.call-to-action-area {
+  padding: 60px 0;
+  margin-bottom: 40px;
+  background-color: #18022d;
+}
+
+
+#addNew {
+  background-color: #5a02ac;
+  color: #fff;
+  width: 170px;
+  height: 45px;
+  border-radius: 7px;
 }
