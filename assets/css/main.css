@@ -1762,8 +1762,8 @@ Table style
   font-size: 14px;
 }
 
-tr:nth-child(1) {
-  background-color: #fd7e14;
+tr:nth-child(1), td:nth-child(1) {
+  background-color: #fd7e14 !important;
   color: #fff;
 }
 

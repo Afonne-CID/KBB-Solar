@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    if(!$(window).scrollTop()) {
-        Counter();
-    }
-});
-
-function Counter (){
     $('.counter-value').each(function(){
         $(this).prop('Counter',0).animate({
             Counter: $(this).text()
@@ -16,4 +10,4 @@ function Counter (){
             }
         });
     });
-};
+})
